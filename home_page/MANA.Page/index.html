@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/responsive.css" />
+  <link rel="shortcut icon" href="./assets/images/png/manalogo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- ------------------------- slick.min.css-----------------  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>MANA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+</head>
+
+<body>
+  <!--  header -->
+  <header class="min_vh_100 min_vh_xsm_100 flex-column d-flex position-relative ">
+    <nav class="ff_opan_sans">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <img class="width_xsm_25" src="./assets/images/png/manalogo.png" alt="" />
+          <div class="d-flex align-items-center gap-3">
+            <ul class="d-flex align-items-center nav_links">
+              <li onclick="hide()">
+                <a class="text-white fw-semibold fs_base nav_hover" href="#learn">LEARN</a>
+              </li>
+              <li onclick="hide()">
+                <a class="text-white fw-semibold fs_base ms-lg-4 nav_hover" href="#LISTINGS">LISTINGS</a>
+              </li>
+              <li onclick="hide()">
+                <a class="text-white fw-semibold fs_base ms-lg-4 nav_hover" href="#COMMUNITIES">COMMUNITIES</a>
+              </li>
+              <li onclick="hide()">
+                <a class="text-white fw-semibold fs_base ms-lg-4 nav_hover" href="#CONTACT">CONTACT</a>
+              </li>
+            </ul>
+            <a class="ms-4 ps-sm-3" href="#">
+              <svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M24.3952 4.50846C24.0073 3.62621 23.448 2.82672 22.7486 2.15475C22.0486 1.48077 21.2234 0.945175 20.3177 0.577078C19.3786 0.193869 18.3713 -0.0022792 17.3544 1.99806e-05C15.9277 1.99806e-05 14.5358 0.383778 13.3262 1.10865C13.0368 1.28206 12.7619 1.47251 12.5014 1.68003C12.241 1.47251 11.9661 1.28206 11.6767 1.10865C10.4671 0.383778 9.07511 1.99806e-05 7.64844 1.99806e-05C6.62113 1.99806e-05 5.62564 0.19332 4.68514 0.577078C3.77647 0.946623 2.95751 1.4782 2.25431 2.15475C1.55399 2.82596 0.994552 3.62564 0.607708 4.50846C0.205463 5.42664 0 6.40167 0 7.40512C0 8.35173 0.196782 9.33813 0.587452 10.3416C0.914457 11.1802 1.38326 12.05 1.98229 12.9284C2.93147 14.3184 4.2366 15.7682 5.85715 17.2379C8.54264 19.674 11.2021 21.3569 11.315 21.4251L12.0008 21.8572C12.3047 22.0476 12.6953 22.0476 12.9992 21.8572L13.685 21.4251C13.7979 21.354 16.4544 19.674 19.1428 17.2379C20.7634 15.7682 22.0685 14.3184 23.0177 12.9284C23.6167 12.05 24.0884 11.1802 24.4125 10.3416C24.8032 9.33813 25 8.35173 25 7.40512C25.0029 6.40167 24.7974 5.42664 24.3952 4.50846ZM12.5014 19.6086C12.5014 19.6086 2.19933 13.1245 2.19933 7.40512C2.19933 4.50846 4.63884 2.16043 7.64844 2.16043C9.76385 2.16043 11.5985 3.32024 12.5014 5.01445C13.4043 3.32024 15.239 2.16043 17.3544 2.16043C20.364 2.16043 22.8035 4.50846 22.8035 7.40512C22.8035 13.1245 12.5014 19.6086 12.5014 19.6086Z"
+                  fill="white" />
+              </svg></a>
+            <div class="d-flex align-items-center ms-4 ps-sm-3">
+              <h3 class="text-white fw-semibold fs_base">$ USD</h3>
+              <a class="ms-2" href="#"><img class="mb-1" src="./assets/images/png/downarrow.png" alt="" /></a>
+            </div>
+            <img class="d-block d-lg-none ms-4" onclick="menuBtn()" src="./assets/images/png/nav.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="d-flex justify-content-center align-items-sm-center flex-grow-1">
+      <div class="text-center mt-5 mt-sm-0">
+        <h1 class="text-white fw-bold fs_4xl mb-sm-5 ff_roman lr_5">
+          The modern way to buy and own a second home
+        </h1>
+        <button class="green_btn fw-bold fs_lg ff_opan_sans text-white mt-5">
+          VIEW LISTINGS
+        </button>
+      </div>
+      <svg class="circlearrow_img" width="69" height="69" viewBox="0 0 69 69" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M34.5 63.25C50.3782 63.25 63.25 50.3782 63.25 34.5C63.25 18.6218 50.3782 5.75 34.5 5.75C18.6218 5.75 5.75 18.6218 5.75 34.5C5.75 50.3782 18.6218 63.25 34.5 63.25Z"
+          stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M23 34.5L34.5 46L46 34.5" stroke="white" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+        <path d="M34.5 23V46" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </div>
+  </header>
+
+  <main>
+    <!-- section -->
+    <section id="learn" class="bgc_skin margin_top padding_97">
+      <div class="container">
+        <div class="text-center mt-5">
+          <h1 class="color_primary fw-bold fs_3xl ff_roman pt-5 lr_5">
+            Find your second home with Mana
+          </h1>
+          <h6 class="color_primary fw-normal fs_md ff_opan_sans mt-2 pt-1">
+            We make it simple
+          </h6>
+        </div>
+        <div class="row mt-5 pt-5 mb-2 pb-1 justify-content-center">
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="d-flex align-items-center ff_roman">
+              <img src="./assets/images/png/shop.png" alt="" />
+              <h2 class="color_primary fw-bold fs_xl ms-2 ps-1">Shop</h2>
+            </div>
+            <div class="ff_opan_sans mt-4 pt-1">
+              <p class="color_primary fw-normal fs_md ms-sm-5 ps-2">
+                Explore our collection of stunning single-family homes in top
+                second home destinations. We'll help you find the perfect fit,
+                and you decide how many shares you'd like to own.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 mt-5 mt-sm-0">
+            <div class="d-flex align-items-center ff_roman">
+              <img src="./assets/images/png/own.png" alt="" />
+              <h2 class="color_primary fw-bold fs_xl ms-2 ps-1">Own</h2>
+            </div>
+            <div class="ff_opan_sans mt-3 pt-1">
+              <p class="color_primary fw-normal fs_md ms-sm-5">
+                Explore our collection of stunning single-family homes in top
+                second home destinations. We'll help you find the perfect fit,
+                and you decide how many shares you'd like to own.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 mt-5 mt-lg-0">
+            <div class="d-flex align-items-center ff_roman">
+              <img src="./assets/images/png/lotus.png" alt="" />
+              <h2 class="color_primary fw-bold fs_xl ms-2 ps-1">Enjoy</h2>
+            </div>
+            <div class="ff_opan_sans mt-3 pt-1">
+              <p class="color_primary fw-normal fs_md ms-sm-5 ps-3">
+                Explore our collection of stunning single-family homes in top
+                second home destinations. We'll help you find the perfect fit,
+                and you decide how many shares you'd like to own.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5 pt-4">
+          <a class="color_primary fw-semibold fs_md border_bottom ff_opan_sans" href="">GET STARTED</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- feauture home section -->
+    <section id="LISTINGS" class="position-relative mb-sm-5 pb-5">
+      <div class="text-center mt-5">
+        <h1 class="color_primary fw-bold fs_3xl ff_roman pt-4 mt-2 lr_5">
+          Featured homes
+        </h1>
+        <h6 class="color_primary fw-normal fs_md ff_opan_sans mt-2 pt-1">
+          Browse our curated selection of wow-worthy listings – homes in the
+          most desirable locations.
+        </h6>
+      </div>
+      <div class="row mt-5 pt-2 align-items-center w-100 justify-content-center justify-content-lg-start">
+        <div class="col-10 col-sm-8 col-lg-6 p-0">
+          <img class="w-100" src="./assets/images/png/home.png" alt="home" />
+        </div>
+
+        <div class="col-10 col-sm-8 col-lg-4 padding_80 mt-4 mt-lg-0">
+          <p class="color_primary fs_md fw-normal ff_opan_sans">
+            CORONA DEL MAR, CA
+          </p>
+          <p class="fw-bold fs_2xl color_primary ff_roman lr_5 mt-xl-4">
+            Ocean Boulevard
+          </p>
+          <p class="ff_opan_sans fw-normal fs_md color_primary mt-xl-3 pt-1">
+            $ 1,263,000 . 1/8 OWNERSHIP
+          </p>
+          <div class="d-flex align-items-center gap-2 mt-4">
+            <p class="color_primary fs_md fw-normal ff_opan_sans">4 Beds</p>
+            <p class="color_primary fs_md fw-normal ff_opan_sans border_lr px-2">
+              4.5 Baths
+            </p>
+            <p class="color_primary fs_md fw-normal ff_opan_sans">
+              3,143 sq ft
+            </p>
+          </div>
+          <p class="color_primary fs_md fw-normal ff_opan_sans mt-xl-4 pt-3">
+            Phasellus condimentum purus nec lacus finibus egestas. Donec a
+            ipsum massa. Pellentesque convallis id erat ut tempor. Integer
+            interdum purus orci, non luctus velit pulvinar quis
+          </p>
+          <div class="mt-4">
+            <a class="color_primary fw-semibold fs_md border_bottom ff_opan_sans" href="">DETAILS</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- own the job section -->
+    <section id="COMMUNITIES" class="bgc_skin position-relative padding_114">
+      <img class="leave_img d-none d-lg-block" src="./assets/images/png/leave.png" alt="" />
+      <div class="container ">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-12 col-lg-7">
+            <video class="w-100" controls poster="./assets/images/png/homeimg.2.png" src="./assets/video/p.mp4"></video>
+          </div>
+          <div class="col-12 col-lg-4">
+            <h1 class="color_primary fw-bold fs_3xl ff_roman lr_5">
+              Own the joy
+            </h1>
+            <p class="color_primary fw-normal fs_md mt-3">
+              Start enriching your life today, not "someday." We're here to
+              help you experience the joy of second home ownership. With Mana,
+              you own a spectacular second home for 1/8 of the cost, while
+              avoiding the hassles of traditional ownership.
+            </p>
+            <div class="mt-4 pt-xxl-3">
+              <a class="color_primary fw-semibold fs_md border_bottom ff_opan_sans" href="">GET STARTED</a>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-around align-items-center padding_170 ">
+          <div class="col-12 col-lg-4">
+            <h1 class="color_primary fw-bold fs_3xl ff_roman lr_5 white_space">
+              Forget timeshares
+            </h1>
+            <p class="color_primary fw-normal fs_md mt-3">
+              With Mana, you own a home, not just a block of time. You can
+              book stays throughout the year, not annually. And resale? It's
+              fast and streamlined, and you set the price.
+            </p>
+            <div class="mt-4 pt-3">
+              <a class="color_primary fw-semibold fs_md border_bottom ff_opan_sans" href="">GET STARTED</a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-8 ps_100 mt-5 mt-lg-0">
+            <div class="overflow-x-scroll">
+              <table class="width_713">
+                <tr>
+                  <th class="fw-semibold fs_md text-white" colspan="2">
+                    MANA HOME
+                  </th>
+                  <th class="fw-semibold fs_md text-white" colspan="1">
+                    RESORT TIMESHARE
+                  </th>
+                </tr>
+                <tr>
+                  <td class="color_primary fw-normal fs_md">PROPERTY TYPE</td>
+                  <td class="color_primary fw-normal fs_md">
+                    Single-family residence
+                  </td>
+                  <td class="color_primary fw-normal fs_md">Hotel/Condo</td>
+                </tr>
+                <tr>
+                  <td class="color_primary fw-normal fs_md">TRUE OWNERSHIP</td>
+                  <td class="color_primary fw-normal fs_md">
+                    Yes, real property
+                  </td>
+                  <td class="color_primary fw-normal fs_md">
+                    No, right-to-use time
+                  </td>
+                </tr>
+                <tr>
+                  <td class="color_primary fw-normal fs_md">USAGE</td>
+                  <td class="color_primary fw-normal fs_md">Ongoing access</td>
+                  <td class="color_primary fw-normal fs_md">Fixed week(s)</td>
+                </tr>
+                <tr>
+                  <td class="color_primary fw-normal fs_md">RESALE APPROACH</td>
+                  <td class="color_primary fw-normal fs_md">
+                    Market pricing; sell on your terms
+                  </td>
+                  <td class="color_primary fw-normal fs_md">
+                    Set pricing; sell with resort
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Owner perspectives section -->
+    <section id="CONTACT" class="padding_98">
+      <div class="container">
+        <div class="text-center ff_roman lr_5">
+          <h1 class="color_primary fw-bold fs_3xl">Owner perspectives</h1>
+        </div>
+        <div class="row mt-5 pt-4 slider">
+          <div class="col-4 px-3">
+            <div class="card_1">
+              <div class="d-flex align-items-center">
+                <img src="./assets/images/png/boyimg.png" alt="" />
+                <div class="ff_opan_sans ms-4">
+                  <h5 class="color_primary fw-semibold fs_md">John Doe</h5>
+                  <h6 class="color_primary fw-normal fs_base">
+                    Mauris pretium,USA
+                  </h6>
+                </div>
+              </div>
+              <p class="color_primary fw-normal fs_base lh_24 mt-4 pt-1">
+                “Integer odio est, efficitur nec nibh quis, euismod ultricies
+                diam. Quisque accumsan libero vitae massa consequat consequat.
+                Sed eu tincidunt lacus, in”
+              </p>
+            </div>
+          </div>
+          <div class="col-4 px-3">
+            <div class="card_1">
+              <div class="d-flex align-items-center">
+                <img src="./assets/images/png/girl.png" alt="" />
+                <div class="ff_opan_sans ms-4">
+                  <h5 class="color_primary fw-semibold fs_md">John Doe</h5>
+                  <h6 class="color_primary fw-normal fs_base">
+                    Mauris pretium,USA
+                  </h6>
+                </div>
+              </div>
+              <p class="color_primary fw-normal fs_base lh_24 mt-4 pt-1">
+                “Integer odio est, efficitur nec nibh quis, euismod ultricies
+                diam. Quisque accumsan libero vitae massa consequat consequat.
+                Sed eu tincidunt lacus, in”
+              </p>
+            </div>
+          </div>
+          <div class="col-4 px-3">
+            <div class="card_1">
+              <div class="d-flex align-items-center">
+                <img src="./assets/images/png/blackboy.png" alt="" />
+                <div class="ff_opan_sans ms-4">
+                  <h5 class="color_primary fw-semibold fs_md">John Doe</h5>
+                  <h6 class="color_primary fw-normal fs_base">
+                    Mauris pretium,USA
+                  </h6>
+                </div>
+              </div>
+              <p class="color_primary fw-normal fs_base lh_24 mt-4 pt-1">
+                “Integer odio est, efficitur nec nibh quis, euismod ultricies
+                diam. Quisque accumsan libero vitae massa consequat consequat.
+                Sed eu tincidunt lacus, in”
+              </p>
+            </div>
+          </div>
+          <div class="col-4 px-3">
+            <div class="card_1">
+              <div class="d-flex align-items-center">
+                <img src="./assets/images/png/boyimg.png" alt="" />
+                <div class="ff_opan_sans ms-4">
+                  <h5 class="color_primary fw-semibold fs_md">John Doe</h5>
+                  <h6 class="color_primary fw-normal fs_base">
+                    Mauris pretium,USA
+                  </h6>
+                </div>
+              </div>
+              <p class="color_primary fw-normal fs_base lh_24 mt-4 pt-1">
+                “Integer odio est, efficitur nec nibh quis, euismod ultricies
+                diam. Quisque accumsan libero vitae massa consequat consequat.
+                Sed eu tincidunt lacus, in”
+              </p>
+            </div>
+          </div>
+          <div class="col-4 px-3">
+            <div class="card_1">
+              <div class="d-flex align-items-center">
+                <img src="./assets/images/png/girl.png" alt="" />
+                <div class="ff_opan_sans ms-4">
+                  <h5 class="color_primary fw-semibold fs_md">John Doe</h5>
+                  <h6 class="color_primary fw-normal fs_base">
+                    Mauris pretium,USA
+                  </h6>
+                </div>
+              </div>
+              <p class="color_primary fw-normal fs_base lh_24 mt-4 pt-1">
+                “Integer odio est, efficitur nec nibh quis, euismod ultricies
+                diam. Quisque accumsan libero vitae massa consequat consequat.
+                Sed eu tincidunt lacus, in”
+              </p>
+            </div>
+          </div>
+          <div class="col-4 px-3">
+            <div class="card_1">
+              <div class="d-flex align-items-center">
+                <img src="./assets/images/png/blackboy.png" alt="" />
+                <div class="ff_opan_sans ms-4">
+                  <h5 class="color_primary fw-semibold fs_md">John Doe</h5>
+                  <h6 class="color_primary fw-normal fs_base">
+                    Mauris pretium,USA
+                  </h6>
+                </div>
+              </div>
+              <p class="color_primary fw-normal fs_base lh_24 mt-4 pt-1">
+                “Integer odio est, efficitur nec nibh quis, euismod ultricies
+                diam. Quisque accumsan libero vitae massa consequat consequat.
+                Sed eu tincidunt lacus, in”
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Don't miss out section -->
+    <section  class="bgc_skin position-relative pt-sm-5 pb-sm-5">
+      <img class="leave_2 d-none d-lg-block" src="./assets/images/png/leave_2.png" alt="" />
+      <img class="leave_3 d-none d-lg-block" src="./assets/images/png/leave_3.png" alt="" />
+      <div class="container">
+        <div class="text-center ff_roman pt-5 pb-5">
+          <h1 class="color_primary fw-bold fs_3xl lr_5">Don't miss out</h1>
+          <p class="color_primary fw-normal fs_md ff_opan_sans mt-2">
+            The best homes sell fast. See the latest listings, inspiring
+            <br />
+            second homes and buying tips.
+          </p>
+          <div class="max_width_561 ff_opan_sans mt-5 pt-4 m-auto">
+            <input class="color_primary fw-semibold fs_md text-start border_line" type="text"
+              placeholder="ENTER EMAIL" />
+            <h1 class="color_primary fw-normal fs_md ff_opan_sans text-start mt-5">
+              Select one of the following:
+            </h1>
+            <div class="text-sm- start text-start mt-2 pt-1">
+              <input type="radio" name="radio" value="" id="radio1" />
+              <label class="color_primary ms-2 fw-normal fs_md" for="">I am buyer</label>
+              <input class="ms-2 ms-sm-4 ps-1" name="radio" type="radio" value="" id="radio2" />
+              <label class="color_primary ms-2 fw-normal fs_md" for="">I am seller</label>
+              <input class="ms-2 ms-sm-4 ps-1" name="radio" type="radio" value="" id="radio3" />
+              <label class="color_primary ms-1 fw-normal fs_md" for="">I'm a broker</label>
+            </div>
+            <div class="mt-5 pt-4">
+              <button class="green_btn text-white fw-bold fs_lg">
+                SUBSCRIBE
+              </button>
+            </div>
+            <p class="color_primary fw-normal fs_xsm mt-4 ff_opan_sans">
+              I give mana permission to contact me & agree to the terms.This
+              site is protected by reCAPTCHA and the Google
+              <span class="fw-semibold fs_xsm">privacy policy & terms of service.</span>
+            </p>
+            <h6 class="color_primary fw-normal fs_md ff_opan_sans mt-4">
+              Want to chat? <span class="fw-semibold fs_md">Contact us.</span>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- As featured in: section -->
+    <section class="padding_100">
+      <div class="container">
+        <div class="text-center ff_roman lr_5">
+          <h1 class="color_primary fw-bold fs_3xl">As featured in:</h1>
+        </div>
+        <div class="row mt-md-5 pt-4 justify-content-center align-items-center">
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2 transform cursor_pointer">
+            <img class="w-100" src="./assets/images/png/Inman .png" alt="#inman" />
+          </div>
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2 transform cursor_pointer">
+            <img class="w-100" src="./assets/images/png/realdeal.png" alt="#realdeal" />
+          </div>
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2 transform cursor_pointer">
+            <img class="w-100" src="./assets/images/png/CNBC .png" alt="CNBC" />
+          </div>
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2 transform cursor_pointer">
+            <img class="w-100" src="./assets/images/png/NYT .png" alt="#NYT" />
+          </div>
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2 transform cursor_pointer">
+            <img class="w-100" src="./assets/images/png/Fortune.png" alt="#fortune" />
+          </div>
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2 transform cursor_pointer">
+            <img class="w-100" src="./assets/images/png/Geekwire.png" alt="#Geekwire" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bgc_green">
+    <div class="container">
+      <div class="row justify-content-between pt-5">
+        <div class="col-lg-5 ff_opan_sans">
+          <img src="./assets/images/png/manafooter.png" alt="" />
+          <h6 class="text-white fw-semibold fs_sm mt-4 pt-2">
+            SIGN UP FOR FULL ACCESS
+          </h6>
+          <p class="text-white fw-normal fs_sm mt-3">
+            Unlock exclusive features & receive updates
+          </p>
+          <div class="make_btn d-flex justify-content-between mt-5">
+            <input class="color_primary fw-normal fs_sm" type="text" placeholder="Email" />
+            <button class="unlock_btn text-white fw-semibold fs_md ff_opan_sans">
+              UNLOCK
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-6 mt-5 mt-lg-0">
+          <div class="row justify-content-center">
+            <div class="col-4 col-sm-5">
+              <ul>
+                <li class="text-white fw-semibold fs_sm">OFFERINGS</li>
+                <li class="mt-4">
+                  <button class="text-white fw-normal fs_sm" href="">Learn</button>
+                </li>
+                <li class="mt-2 pt-1">
+                  <button class="text-white fw-normal fs_sm" href="">Listings</button>
+                </li>
+                <li class="mt-2 pt-1">
+                  <button class="text-white fw-normal fs_sm" href="">Scheduling</button>
+                </li>
+                <li class="mt-2 pt-1">
+                  <button class="text-white fw-normal fs_sm" href="">Financing</button>
+                </li>
+                <li class="mt-2 pt-1">
+                  <button class="text-white fw-normal fs_sm" href="">Closing</button>
+                </li>
+                <li class="mt-2 pt-1">
+                  <button class="text-white fw-normal fs_sm" href="">Selling</button>
+                </li>
+              </ul>
+            </div>
+            <div class="col-4 col-sm-4">
+              <ul>
+                <li class="text-white fw-semibold fs_sm">ABOUT</li>
+                <li class="mt-4">
+                  <button class="text-white fw-normal fs_sm" href="">Our story</button>
+                </li>
+                <li class="mt-2 pt-1">
+                  <button class="text-white fw-normal fs_sm" href="">Agents</button>
+                </li>
+                <li class="mt-2 pt-1">
+                  <button class="text-white fw-normal fs_sm" href="">Careers</button>
+                </li>
+                <li class="mt-2 pt-1">
+                  <button class="text-white fw-normal fs_sm" href="">Get the inside story</button>
+                </li>
+                <li class="mt-2 pt-1">
+                  <button class="text-white fw-normal fs_sm" href="">Press</button>
+                </li>
+                <li class="mt-2 pt-1">
+                  <button class="text-white fw-normal fs_sm" href="">Communities</button>
+                </li>
+              </ul>
+            </div>
+            <div class="col-4 col-sm-3 ">
+              <ul>
+                <li class="text-white fw-semibold fs_sm">SUPPORT</li>
+                <li class="mt-4">
+                  <button class="text-white fw-normal fs_sm">Resources</button>
+                </li>
+                <li class="mt-2 pt-1">
+                  <button class="text-white fw-normal fs_sm">FAQs</button>
+                </li>
+                <li class="mt-2 pt-1">
+                  <button class="text-white fw-normal fs_sm">Privacy</button>
+                </li>
+                <li class="mt-2 pt-1">
+                  <button class="text-white fw-normal fs_sm">Candidate Privacy</button>
+                </li>
+                <li class="mt-2 pt-1">
+                  <button class="text-white fw-normal fs_sm">Sitemap</button>
+                </li>
+                <li class="mt-2 pt-1">
+                  <button class="text-white fw-normal fs_sm">Contact</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="mt-5" />
+
+      <div class="d-flex mt-4 pb-4 align-items-center flex-column flex-lg-row">
+        <div class="d-flex flex-column flex-sm-row">
+          <img src="./assets/images/png/googleplay.png" alt="" />
+          <img class="ms-sm-2 mt-3 mt-sm-0" src="./assets/images/png/appstore.png" alt="" />
+        </div>
+        <div class="d-flex gap-4 gap-sm-5 mt-5 mt-lg-0">
+          <div class="py-2 transform pl_112">
+            <img src="./assets/images/png/icon-instagram .png" alt="" />
+          </div>
+          <div class="py-2 transform pl_158">
+            <img src="./assets/images/png/Path 518556.png" alt="" />
+          </div>
+          <div class="py-2 transform pl_158">
+            <img src="./assets/images/png/icon-linkedin .png" alt="" />
+          </div>
+          <div class="py-2 transform pl_158">
+            <img src="./assets/images/png/icon-twitter .png" alt="" />
+          </div>
+          <div class="py-2 transform pl_158">
+            <img src="./assets/images/png/icon-youtube .png" alt="" />
+          </div>
+        </div>
+      </div>
+      <hr class="mt-2" />
+      <div class="text-center ff_opan_sans pb-3">
+        <a class="text-white fw-normal fs_xsm" href="">@copyrightmana2021</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- --------------------jquery.min.js----------------------  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- ------------------------- slick.min.js-----------------  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="./index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
